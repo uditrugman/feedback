@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/feedback/feedback.iml" filepath="$PROJECT_DIR$/feedback/feedback.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feedback_gitlab/feedback_gitlab.iml" filepath="$PROJECT_DIR$/feedback_gitlab/feedback_gitlab.iml" />
+      <module fileurl="file://$PROJECT_DIR$/feedback_sentry/feedback_sentry.iml" filepath="$PROJECT_DIR$/feedback_sentry/feedback_sentry.iml" />
+    </modules>
+  </component>
+</project>
