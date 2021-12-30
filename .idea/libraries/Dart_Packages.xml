@@ -65,6 +65,13 @@
             </list>
           </value>
         </entry>
+        <entry key="feedback">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/feedback-2.2.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="ffi">
           <value>
             <list>
@@ -455,6 +462,7 @@
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.15.0/lib" />
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/cupertino_icons-1.0.4/lib" />
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/fake_async-1.2.0/lib" />
+      <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/feedback-2.2.1/lib" />
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/ffi-1.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/file-6.1.2/lib" />
       <root url="file://$PROJECT_DIR$/../../bin/flutter/.pub-cache/hosted/pub.dartlang.org/flutter_email_sender-5.0.2/lib" />
