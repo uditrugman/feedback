@@ -154,7 +154,7 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                   ),
                 ),
               ),
-              if (widget.isFeedbackVisible || !animation.isDismissed)
+              if (widget.isFeedbackVisible)
               Align(
                 alignment: Alignment(controlsHorizontalAlignment.value, -0.7),
                 child: ControlsColumn(
