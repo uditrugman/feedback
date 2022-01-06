@@ -44,8 +44,7 @@ class FeedbackWidget extends StatefulWidget {
 }
 
 @visibleForTesting
-class FeedbackWidgetState extends State<FeedbackWidget>
-    with SingleTickerProviderStateMixin {
+class FeedbackWidgetState extends State<FeedbackWidget> with SingleTickerProviderStateMixin {
   final BackButtonInterceptor _interceptor = BackButtonInterceptor();
 
   @visibleForTesting
@@ -100,15 +99,13 @@ class FeedbackWidgetState extends State<FeedbackWidget>
     super.didUpdateWidget(oldWidget);
     // update feedback mode with the initial value
     mode = widget.mode;
-    if (oldWidget.isFeedbackVisible != widget.isFeedbackVisible &&
-        oldWidget.isFeedbackVisible == false) {
+    if (oldWidget.isFeedbackVisible != widget.isFeedbackVisible && oldWidget.isFeedbackVisible == false) {
       // Feedback is now visible,
       // start animation to show it.
       _controller.forward();
     }
 
-    if (oldWidget.isFeedbackVisible != widget.isFeedbackVisible &&
-        oldWidget.isFeedbackVisible == true) {
+    if (oldWidget.isFeedbackVisible != widget.isFeedbackVisible && oldWidget.isFeedbackVisible == true) {
       // Feedback is no longer visible,
       // reverse animation to hide it.
       _controller.reverse();
@@ -117,17 +114,11 @@ class FeedbackWidgetState extends State<FeedbackWidget>
 
   @override
   Widget build(BuildContext context) {
-    final scaleAnimation = Tween<double>(begin: 1, end: 0.65)
-        .chain(CurveTween(curve: Curves.easeInSine))
-        .animate(_controller);
+    final scaleAnimation = Tween<double>(begin: 1, end: 0.65).chain(CurveTween(curve: Curves.easeInSine)).animate(_controller);
 
-    final animation = Tween<double>(begin: 0, end: 1)
-        .chain(CurveTween(curve: Curves.easeInSine))
-        .animate(_controller);
+    final animation = Tween<double>(begin: 0, end: 1).chain(CurveTween(curve: Curves.easeInSine)).animate(_controller);
 
-    final controlsHorizontalAlignment = Tween<double>(begin: 1.4, end: .95)
-        .chain(CurveTween(curve: Curves.easeInSine))
-        .animate(_controller);
+    final controlsHorizontalAlignment = Tween<double>(begin: 1.4, end: .95).chain(CurveTween(curve: Curves.easeInSine)).animate(_controller);
 
     return AnimatedBuilder(
       animation: _controller,
@@ -147,46 +138,45 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                     controller: screenshotController,
                     child: PaintOnChild(
                       controller: painterController,
-                      isPaintingActive:
-                          mode == FeedbackMode.draw && widget.isFeedbackVisible,
+                      isPaintingActive: mode == FeedbackMode.draw && widget.isFeedbackVisible,
                       child: widget.child,
                     ),
                   ),
                 ),
               ),
               if (widget.isFeedbackVisible)
-              Align(
-                alignment: Alignment(controlsHorizontalAlignment.value, -0.7),
-                child: ControlsColumn(
-                  mode: mode,
-                  activeColor: painterController.drawColor,
-                  colors: widget.drawColors,
-                  onColorChanged: (color) {
-                    setState(() {
-                      painterController.drawColor = color;
-                    });
-                    _hideKeyboard(context);
-                  },
-                  onUndo: () {
-                    painterController.undo();
-                    _hideKeyboard(context);
-                  },
-                  onClearDrawing: () {
-                    painterController.clear();
-                    _hideKeyboard(context);
-                  },
-                  onControlModeChanged: (mode) {
-                    setState(() {
-                      this.mode = mode;
+                Align(
+                  alignment: Alignment(controlsHorizontalAlignment.value, -0.7),
+                  child: ControlsColumn(
+                    mode: mode,
+                    activeColor: painterController.drawColor,
+                    colors: widget.drawColors,
+                    onColorChanged: (color) {
+                      setState(() {
+                        painterController.drawColor = color;
+                      });
                       _hideKeyboard(context);
-                    });
-                  },
-                  onCloseFeedback: () {
-                    _hideKeyboard(context);
-                    BetterFeedback.of(context).hide();
-                  },
+                    },
+                    onUndo: () {
+                      painterController.undo();
+                      _hideKeyboard(context);
+                    },
+                    onClearDrawing: () {
+                      painterController.clear();
+                      _hideKeyboard(context);
+                    },
+                    onControlModeChanged: (mode) {
+                      setState(() {
+                        this.mode = mode;
+                        _hideKeyboard(context);
+                      });
+                    },
+                    onCloseFeedback: () {
+                      _hideKeyboard(context);
+                      BetterFeedback.of(context).hide();
+                    },
+                  ),
                 ),
-              ),
               // only display if feedback is visible or this widget is still
               // animating out
               if (widget.isFeedbackVisible || !animation.isDismissed)
@@ -203,8 +193,7 @@ class FeedbackWidgetState extends State<FeedbackWidget>
                       //   1 - (scaleOrigin + height*scaleFactor)
                       (1 - (.35 / 2 + 1.65 / 2 * .65)),
                   child: SlideTransition(
-                    position: Tween(begin: const Offset(0, 1), end: Offset.zero)
-                        .animate(animation),
+                    position: Tween(begin: const Offset(0, 1), end: Offset.zero).animate(animation),
                     child: Padding(
                       padding: const EdgeInsets.only(top: 24),
                       child: FeedbackBottomSheet(
@@ -265,7 +254,7 @@ class FeedbackWidgetState extends State<FeedbackWidget>
     );
   }
 
-  static Future<void> _sendFeedback(
+  Future<void> _sendFeedback(
     BuildContext context,
     OnFeedbackCallback onFeedbackSubmitted,
     ScreenshotController controller,
@@ -291,7 +280,7 @@ class FeedbackWidgetState extends State<FeedbackWidget>
     BetterFeedback.of(context).hide();
   }
 
-  static void _hideKeyboard(BuildContext context) {
-    FocusScope.of(context).requestFocus(FocusNode());
+  void _hideKeyboard(BuildContext context) {
+    FocusScope.of(context).requestFocus(painterController.paintFocusNode);
   }
 }

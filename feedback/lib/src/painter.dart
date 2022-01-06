@@ -13,8 +13,20 @@ class Painter extends StatefulWidget {
 }
 
 class _PainterState extends State<Painter> {
+  var firstBuild = true;
+  var painting = false;
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
+    if (firstBuild) {
+      firstBuild = false;
+      FocusScope.of(context).requestFocus(widget.painterController.paintFocusNode);
+    }
     return SizedBox.expand(
       child: GestureDetector(
         onPanStart: _onPanStart,
@@ -32,6 +44,11 @@ class _PainterState extends State<Painter> {
   }
 
   void _onPanStart(DragStartDetails start) {
+    if (!widget.painterController.paintFocusNode.hasFocus) {
+      FocusScope.of(context).requestFocus(widget.painterController.paintFocusNode);
+      // return;
+    }
+    painting = true;
     final Offset pos = (context.findRenderObject() as RenderBox)
         .globalToLocal(start.globalPosition);
     widget.painterController._pathHistory.add(pos);
@@ -39,6 +56,9 @@ class _PainterState extends State<Painter> {
   }
 
   void _onPanUpdate(DragUpdateDetails update) {
+    if (!painting) {
+      return;
+    }
     final Offset pos = (context.findRenderObject() as RenderBox)
         .globalToLocal(update.globalPosition);
     widget.painterController._pathHistory.updateCurrent(pos);
@@ -46,6 +66,10 @@ class _PainterState extends State<Painter> {
   }
 
   void _onPanEnd(DragEndDetails end) {
+    if (!painting) {
+      return;
+    }
+    painting = false;
     widget.painterController._pathHistory.endCurrent();
     widget.painterController._notifyListeners();
   }
@@ -122,6 +146,8 @@ class _PathHistory {
 }
 
 class PainterController extends ChangeNotifier {
+  final paintFocusNode = FocusNode();
+
   PainterController() : _pathHistory = _PathHistory();
 
   Color _drawColor = const Color.fromARGB(255, 0, 0, 0);

@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab7d25f1-ec0c-4a86-ab49-419f8593c895" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/example/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/ios/Flutter/AppFrameworkInfo.plist" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/project.pbxproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/example/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/ios/Runner.xcworkspace/contents.xcworkspacedata" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/lib/src/painter.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/painter.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +41,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -57,7 +63,8 @@
       <option name="presentableId" value="Default" />
       <updated>1640360785062</updated>
       <workItem from="1640360786530" duration="3633000" />
-      <workItem from="1640840223974" duration="2372000" />
+      <workItem from="1640840223974" duration="2654000" />
+      <workItem from="1641444663926" duration="3660000" />
     </task>
     <servers />
   </component>
