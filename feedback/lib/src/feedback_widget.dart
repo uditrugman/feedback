@@ -120,6 +120,7 @@ class FeedbackWidgetState extends State<FeedbackWidget> with SingleTickerProvide
 
     final controlsHorizontalAlignment = Tween<double>(begin: 1.4, end: .95).chain(CurveTween(curve: Curves.easeInSine)).animate(_controller);
 
+    // print("FeedbackWidget: size: ${MediaQuery.of(context)} -----------------------------------");
     return AnimatedBuilder(
       animation: _controller,
       builder: (context, child) {
@@ -129,17 +130,20 @@ class FeedbackWidgetState extends State<FeedbackWidget> with SingleTickerProvide
             fit: StackFit.passthrough,
             alignment: Alignment.center,
             children: <Widget>[
-              Align(
-                alignment: Alignment.topCenter,
-                child: ScaleAndClip(
-                  scale: scaleAnimation.value,
-                  alignmentProgress: animation.value,
-                  child: Screenshot(
-                    controller: screenshotController,
-                    child: PaintOnChild(
-                      controller: painterController,
-                      isPaintingActive: mode == FeedbackMode.draw && widget.isFeedbackVisible,
-                      child: widget.child,
+              MediaQuery(
+                data: !widget.isFeedbackVisible ? MediaQuery.of(context) : MediaQuery.of(context).copyWith(viewInsets: EdgeInsets.zero),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: ScaleAndClip(
+                    scale: scaleAnimation.value,
+                    alignmentProgress: animation.value,
+                    child: Screenshot(
+                      controller: screenshotController,
+                      child: PaintOnChild(
+                        controller: painterController,
+                        isPaintingActive: mode == FeedbackMode.draw && widget.isFeedbackVisible,
+                        child: widget.child,
+                      ),
                     ),
                   ),
                 ),

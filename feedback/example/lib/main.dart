@@ -125,7 +125,7 @@ class MyHomePage extends StatelessWidget {
                 child: const Text('Provide feedback'),
                 onPressed: () {
                   BetterFeedback.of(context).show(
-                    (feedback) async {
+                        (feedback) async {
                       // upload to server, share whatever
                       // for example purposes just show it to the user
                       alertFeedbackFunction(
@@ -144,7 +144,7 @@ class MyHomePage extends StatelessWidget {
                     BetterFeedback.of(context).show((feedback) async {
                       // draft an email and send to developer
                       final screenshotFilePath =
-                          await writeImageToStorage(feedback.screenshot);
+                      await writeImageToStorage(feedback.screenshot);
 
                       final Email email = Email(
                         body: feedback.text,
@@ -163,9 +163,9 @@ class MyHomePage extends StatelessWidget {
                 child: const Text('Provide feedback via platform sharing'),
                 onPressed: () {
                   BetterFeedback.of(context).show(
-                    (feedback) async {
+                        (feedback) async {
                       final screenshotFilePath =
-                          await writeImageToStorage(feedback.screenshot);
+                      await writeImageToStorage(feedback.screenshot);
 
                       await Share.shareFiles(
                         [screenshotFilePath],
