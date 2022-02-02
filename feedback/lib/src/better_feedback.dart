@@ -59,11 +59,15 @@ class BetterFeedback extends StatefulWidget {
     this.localeOverride,
     this.mode = FeedbackMode.draw,
     this.pixelRatio = 3.0,
+    this.useInheritedMediaQuery = false,
   })  : assert(
           pixelRatio > 0,
           'pixelRatio needs to be larger than 0',
         ),
         super(key: key);
+
+  /// Whether to inherit the media query or to create one from the current window
+  final bool useInheritedMediaQuery;
 
   /// The application to wrap, typically a [MaterialApp].
   final Widget child;
@@ -149,6 +153,7 @@ class _BetterFeedbackState extends State<BetterFeedback> {
   @override
   Widget build(BuildContext context) {
     return FeedbackApp(
+      useInheritedMediaQuery: widget.useInheritedMediaQuery,
       data: widget.theme,
       localizationsDelegates: widget.localizationsDelegates,
       localeOverride: widget.localeOverride,

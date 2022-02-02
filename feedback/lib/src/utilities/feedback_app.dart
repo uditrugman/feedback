@@ -14,24 +14,31 @@ class FeedbackApp extends StatelessWidget {
     this.data,
     this.localizationsDelegates,
     this.localeOverride,
+    this.useInheritedMediaQuery = false,
   }) : super(key: key);
 
   final Widget child;
   final FeedbackThemeData? data;
   final List<LocalizationsDelegate<dynamic>>? localizationsDelegates;
   final Locale? localeOverride;
+  final bool useInheritedMediaQuery;
 
   @override
   Widget build(BuildContext context) {
     return FeedbackLocalization(
       delegates: localizationsDelegates,
       localeOverride: localeOverride,
-      child: MediaQueryFromWindow(
-        child: FeedbackTheme(
-          data: data ?? FeedbackThemeData(),
-          child: child,
-        ),
-      ),
+      child: useInheritedMediaQuery
+          ? FeedbackTheme(
+              data: data ?? FeedbackThemeData(),
+              child: child,
+            )
+          : MediaQueryFromWindow(
+              child: FeedbackTheme(
+                data: data ?? FeedbackThemeData(),
+                child: child,
+              ),
+            ),
     );
   }
 }

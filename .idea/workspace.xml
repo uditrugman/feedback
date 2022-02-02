@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ab7d25f1-ec0c-4a86-ab49-419f8593c895" name="Changes" comment="better use of focusnode">
+    <list default="true" id="ab7d25f1-ec0c-4a86-ab49-419f8593c895" name="Changes" comment="- avoid insets when keyboard is visible">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/example/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/lib/src/better_feedback.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/better_feedback.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/lib/src/utilities/feedback_app.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/utilities/feedback_app.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,7 +59,8 @@
       <updated>1640360785062</updated>
       <workItem from="1640360786530" duration="3633000" />
       <workItem from="1640840223974" duration="2654000" />
-      <workItem from="1641444663926" duration="9592000" />
+      <workItem from="1641444663926" duration="9651000" />
+      <workItem from="1643734913421" duration="935000" />
     </task>
     <task id="LOCAL-00001" summary="better use of focusnode">
       <created>1641450395847</created>
@@ -68,7 +69,14 @@
       <option name="project" value="LOCAL" />
       <updated>1641450395847</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="- avoid insets when keyboard is visible">
+      <created>1641468768754</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1641468768754</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -87,7 +95,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="better use of focusnode" />
-    <option name="LAST_COMMIT_MESSAGE" value="better use of focusnode" />
+    <MESSAGE value="- avoid insets when keyboard is visible" />
+    <option name="LAST_COMMIT_MESSAGE" value="- avoid insets when keyboard is visible" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
