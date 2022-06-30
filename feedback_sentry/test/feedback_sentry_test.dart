@@ -97,4 +97,37 @@ class MockHub implements Hub {
 
   @override
   SentryId get lastEventId => throw UnimplementedError();
+
+  @override
+  Future<SentryId> captureTransaction(SentryTransaction transaction) {
+    // TODO: implement captureTransaction
+    throw UnimplementedError();
+  }
+
+  @override
+  ISentrySpan? getSpan() {
+    // TODO: implement getSpan
+    throw UnimplementedError();
+  }
+
+  @override
+  // TODO: implement options
+  SentryOptions get options => throw UnimplementedError();
+
+  @override
+  void setSpanContext(throwable, ISentrySpan span, String transaction) {
+    // TODO: implement setSpanContext
+  }
+
+  @override
+  ISentrySpan startTransaction(String name, String operation, {String? description, DateTime? startTimestamp, bool? bindToScope, bool? waitForChildren, Duration? autoFinishAfter, bool? trimEnd, OnTransactionFinish? onFinish, Map<String, dynamic>? customSamplingContext}) {
+    // TODO: implement startTransaction
+    throw UnimplementedError();
+  }
+
+  @override
+  ISentrySpan startTransactionWithContext(SentryTransactionContext transactionContext, {Map<String, dynamic>? customSamplingContext, DateTime? startTimestamp, bool? bindToScope, bool? waitForChildren, Duration? autoFinishAfter, bool? trimEnd, OnTransactionFinish? onFinish}) {
+    // TODO: implement startTransactionWithContext
+    throw UnimplementedError();
+  }
 }
