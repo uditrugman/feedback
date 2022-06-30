@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ab7d25f1-ec0c-4a86-ab49-419f8593c895" name="Changes" comment="- avoid insets when keyboard is visible">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/lib/src/l18n/localization.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/l18n/localization.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/lib/src/utilities/back_button_interceptor.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/utilities/back_button_interceptor.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/lib/src/utilities/media_query_from_window.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/utilities/media_query_from_window.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/pubspec.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/feedback_sentry/test/feedback_sentry_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback_sentry/test/feedback_sentry_test.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +53,7 @@
       <workItem from="1640840223974" duration="2654000" />
       <workItem from="1641444663926" duration="9651000" />
       <workItem from="1643734913421" duration="935000" />
-      <workItem from="1656576455417" duration="135000" />
+      <workItem from="1656576455417" duration="663000" />
     </task>
     <task id="LOCAL-00001" summary="better use of focusnode">
       <created>1641450395847</created>
