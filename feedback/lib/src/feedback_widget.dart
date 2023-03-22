@@ -142,7 +142,12 @@ class FeedbackWidgetState extends State<FeedbackWidget> with SingleTickerProvide
                       child: PaintOnChild(
                         controller: painterController,
                         isPaintingActive: mode == FeedbackMode.draw && widget.isFeedbackVisible,
-                        child: widget.child,
+                        child: FocusTraversalGroup(
+                          descendantsAreTraversable: !widget.isFeedbackVisible,
+                          descendantsAreFocusable: !widget.isFeedbackVisible,
+                          child: widget.child,
+                        ),
+                        // child: widget.screenshot != null ? Image.memory(widget.screenshot!) : widget.child,
                       ),
                     ),
                   ),

@@ -1,8 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="ab7d25f1-ec0c-4a86-ab49-419f8593c895" name="Changes" comment="- avoid insets when keyboard is visible">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/lib/src/feedback_widget.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/feedback/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/feedback/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,6 +26,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MacroExpansionManager">
+    <option name="directoryName" value="18yn8y0s" />
+  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
@@ -31,8 +40,17 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "WebServerToolWindowFactoryState": "false",
+    "dart.analysis.tool.window.visible": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
     "settings.editor.selected.configurable": "flutter.settings",
-    "show.migrate.to.gradle.popup": "false"
+    "show.migrate.to.gradle.popup": "false",
+    "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RunManager">
@@ -54,6 +72,9 @@
       <workItem from="1641444663926" duration="9651000" />
       <workItem from="1643734913421" duration="935000" />
       <workItem from="1656576455417" duration="663000" />
+      <workItem from="1658210649148" duration="906000" />
+      <workItem from="1658239575515" duration="1852000" />
+      <workItem from="1679495147964" duration="8546000" />
     </task>
     <task id="LOCAL-00001" summary="better use of focusnode">
       <created>1641450395847</created>
